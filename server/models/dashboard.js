@@ -50,4 +50,4 @@ const dashboardSchema = mongoose.Schema({
 })
 
 const Dashboard= mongoose.model('Dashboard',dashboardSchema);
-export default Dashboard;
+export default  Dashboard; 
