@@ -1,21 +1,10 @@
 import mongoose from 'mongoose';
 
-const homeSchema = mongoose.Schema({
-    companyDetails: {
-        title: {
-            type: String,
-            required : [true,'Please add Post available for hiring']
+const internshipSchema = mongoose.Schema({
+        jobPosition: {
+            type:String,
+            required: [true,'Please add the role you are hiring for']
         },
-        subtitle: {
-            type: String,
-            required : [true,'Please add Company Name']
-        },
-        img: {
-            type: String,
-            required: [true,'Please add logo']
-        },
-    },
-    internshipDetails: {
         location: {
             type: String,
             required: [true,'Please add location of the work']
@@ -36,8 +25,8 @@ const homeSchema = mongoose.Schema({
             type: String,
             required:[true]
         }
-    }
+    
 })
 
-const Home= mongoose.model('Home',homeSchema);
-export default Home;
+const InternShips= mongoose.model('Home',internshipSchema);
+export default InternShips;
