@@ -6,7 +6,8 @@ import dotenv from 'dotenv';
 
 import dashboardRoute from './routers/dashboard.js';
 import internshipRoute from './routers/internship.js';
-import companydashboardRoute from './routers/companydashboard.js'
+import companydashboardRoute from './routers/companydashboard.js';
+import userDashboardRoute from './routers/userdashboard.js';
 
 dotenv.config({path: './config/config.env'});
 
@@ -19,6 +20,7 @@ app.use(cors());
 app.use('/',dashboardRoute);
 app.use('/v1/internships',internshipRoute);
 app.use('/v1/companyDashboard',companydashboardRoute);
+app.use('/v1/userDashboard',userDashboardRoute);
 
 
 mongoose.connect(process.env.MONGO_URI,{
