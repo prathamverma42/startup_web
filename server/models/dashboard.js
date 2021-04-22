@@ -46,6 +46,10 @@ const dashboardSchema = mongoose.Schema({
     yearOfStudy: {
         type: Number,
         required: [true,'Please add a year of Study']
+    },
+    password: {
+        type: String,
+        required: [true]
     }
 })
 

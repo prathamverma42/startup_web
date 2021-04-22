@@ -25,7 +25,6 @@ const internshipSchema = mongoose.Schema({
             type: String,
             required:[true]
         }
-    
 })
 
 const InternShips= mongoose.model('Home',internshipSchema);
