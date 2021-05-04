@@ -1,9 +1,9 @@
-import express from 'express';
+import express from "express";
 const router = express.Router();
 
-import {getPost, createPost} from '../controllers/dashboard.js';
+import { getPost, createPost } from "../controllers/dashboard.js";
 
-router.get('/',getPost);
-router.post('/',createPost);
+router.get("/", getPost);
+router.post("/", createPost);
 
 export default router;
