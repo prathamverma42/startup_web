@@ -17,6 +17,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(BodyParser.json());
 app.use(cors());
+
 //app.use('/',dashboardRoute);
 app.use("/v1/internships", internshipRoute);
 app.use("/v1/companyDashboard", companydashboardRoute);
