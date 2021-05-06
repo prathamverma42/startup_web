@@ -9,10 +9,6 @@ const internshipSchema = mongoose.Schema({
     type: String,
     required: [true, "Please add location of the work"],
   },
-  aboutCompany: {
-    type: String,
-    required: [true],
-  },
   responsibilities: {
     type: String,
     required: [true],

@@ -25,10 +25,6 @@ const companySchema = mongoose.Schema({
     type: String,
     required: [true],
   },
-  idProof: {
-    type: String,
-    required: [true, "Please link an id-proof"],
-  },
 });
 
 const CompanyDashboard = mongoose.model("Company", companySchema);
