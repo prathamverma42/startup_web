@@ -16,6 +16,11 @@ const UserSchema = new mongoose.Schema({
       "Please add a valid email",
     ],
   },
+  role: {
+    type: String,
+    enum: ["user", "company"],
+    default: "user",
+  },
   phoneNumber: {
     type: String,
     required: [true, "Please add a phoneNumber"],
@@ -25,6 +30,12 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: [true],
   },
+});
+UserSchema.virtual("internship", {
+  ref: "internship",
+  localField: "_id",
+  foreignField: "user",
+  justOne: false,
 });
 
 UserSchema.pre("save", async function (next) {

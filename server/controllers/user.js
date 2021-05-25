@@ -1,33 +1,11 @@
 import User from "../models/user.js";
 import ErrorResponse from "../utils/errorResponse.js";
-
-// export const register = async (req, res) => {
-//   const { name, email, phoneNumber, password } = req.body;
-//   const user = await user.create({
-//     name,
-//     email,
-//     phoneNumber,
-//     password,
-//   });
-//   res.status(200).json({
-//     success: true,
-//     data: user,
-//   });
-// };
-
-// export const createPost = async (req, res) => {
-//   // res.send("hello post request");
-//   const data = req.body;
-//   const newuser = new user(data);
-//   await newuser.save();
-//   res.status(200).json(newuser);
-// };
-
 export const register = async (req, res, next) => {
-  const { name, email, password, phoneNumber } = req.body;
+  const { name, email, password, phoneNumber, role } = req.body;
   const user = await User.create({
     name,
     email,
+    role,
     password,
     phoneNumber,
   });
