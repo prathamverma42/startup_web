@@ -20,7 +20,12 @@ const internshipSchema = mongoose.Schema({
     type: String,
     required: [true],
   },
+  user: {
+    type: mongoose.Schema.ObjectId,
+    ref: "User",
+    required: true,
+  },
 });
 
-const InternShips = mongoose.model("Home", internshipSchema);
+const InternShips = mongoose.model("internship", internshipSchema);
 export default InternShips;
